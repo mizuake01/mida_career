@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>収入アップ事例集｜みだ｜15分の面談で人生変わるかも</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ===== ベース ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            font-size: 15px
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #1a1a2e;
+            line-height: 1.9;
+            background: #fff
+        }
+
+        img {
+            max-width: 100%;
+            height: auto
+        }
+
+        a {
+            color: #d4872e;
+            text-decoration: none
+        }
+
+        :root {
+            --navy: #0f1b3d;
+            --navy-light: #1a2d5a;
+            --accent: #d4872e;
+            --accent-light: #e8a650;
+            --gold: #c9a84c;
+            --white: #fff;
+            --off-white: #f7f6f3;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+            --gray-800: #1f2937;
+            --line-green: #06c755;
+        }
+
+        /* ===== レイアウト ===== */
+        .page {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        /* ===== 表紙 ===== */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 24px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .cover::after {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 135, 46, .15), transparent 70%)
+        }
+
+        .cover-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 560px
+        }
+
+        .cover-label {
+            display: inline-block;
+            background: rgba(212, 135, 46, .15);
+            border: 1px solid rgba(212, 135, 46, .3);
+            padding: 6px 20px;
+            border-radius: 100px;
+            font-size: .75rem;
+            font-weight: 600;
+            color: var(--accent-light);
+            margin-bottom: 24px;
+            letter-spacing: .1em
+        }
+
+        .cover h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.5;
+            margin-bottom: 16px
+        }
+
+        .cover h1 .em {
+            color: var(--accent-light)
+        }
+
+        .cover-sub {
+            font-size: .95rem;
+            color: rgba(255, 255, 255, .7);
+            line-height: 1.9;
+            margin-bottom: 32px
+        }
+
+        .cover-author {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .1);
+            padding: 12px 24px;
+            border-radius: 12px
+        }
+
+        .cover-author-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--white)
+        }
+
+        .cover-author-info {
+            text-align: left;
+            font-size: .8rem;
+            color: rgba(255, 255, 255, .6)
+        }
+
+        .cover-author-info strong {
+            display: block;
+            color: var(--white);
+            font-size: .9rem
+        }
+
+        /* ===== セクション共通 ===== */
+        .section {
+            padding: 56px 0
+        }
+
+        .section--off {
+            background: var(--off-white)
+        }
+
+        .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--white);
+            font-size: .8rem;
+            font-weight: 800;
+            margin-bottom: 12px
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            line-height: 1.5;
+            margin-bottom: 8px
+        }
+
+        .section-subtitle {
+            font-size: .85rem;
+            color: var(--gray-600);
+            margin-bottom: 24px
+        }
+
+        .divider {
+            width: 48px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            margin: 12px 0 24px
+        }
+
+        /* ===== 目次 ===== */
+        .toc {
+            background: var(--off-white);
+            padding: 40px 0
+        }
+
+        .toc-list {
+            list-style: none;
+            counter-reset: toc
+        }
+
+        .toc-list li {
+            counter-increment: toc;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--gray-200);
+            font-size: .9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .toc-list li::before {
+            content: counter(toc, decimal-leading-zero);
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .7rem;
+            font-weight: 800
+        }
+
+        .toc-list li:last-child {
+            border-bottom: none
+        }
+
+        /* ===== 事例カード ===== */
+        .case {
+            margin-bottom: 20px
+        }
+
+        .case-header {
+            background: linear-gradient(135deg, var(--navy), var(--navy-light));
+            color: var(--white);
+            padding: 24px;
+            border-radius: 16px 16px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 16px
+        }
+
+        .case-num {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(212, 135, 46, .2);
+            border: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 900;
+            color: var(--accent-light)
+        }
+
+        .case-header-text small {
+            display: block;
+            font-size: .75rem;
+            color: rgba(255, 255, 255, .5);
+            margin-bottom: 2px
+        }
+
+        .case-header-text strong {
+            font-size: 1.1rem;
+            font-weight: 800
+        }
+
+        .case-body {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-top: none;
+            border-radius: 0 0 16px 16px;
+            padding: 28px 24px
+        }
+
+        /* ビフォーアフター */
+        .ba {
+            display: grid;
+            grid-template-columns: 1fr 40px 1fr;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px
+        }
+
+        .ba-box {
+            padding: 20px 16px;
+            border-radius: 12px;
+            text-align: center
+        }
+
+        .ba-before {
+            background: var(--gray-100)
+        }
+
+        .ba-after {
+            background: rgba(212, 135, 46, .08)
+        }
+
+        .ba-label {
+            font-size: .65rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--gray-400);
+            margin-bottom: 6px
+        }
+
+        .ba-after .ba-label {
+            color: var(--accent)
+        }
+
+        .ba-value {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--gray-800);
+            line-height: 1.4
+        }
+
+        .ba-after .ba-value {
+            color: var(--accent)
+        }
+
+        .ba-value small {
+            display: block;
+            font-size: .75rem;
+            font-weight: 500;
+            color: var(--gray-400);
+            margin-top: 4px
+        }
+
+        .ba-after .ba-value small {
+            color: var(--accent)
+        }
+
+        .ba-arrow {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--accent)
+        }
+
+        /* ストーリー */
+        .story-block {
+            margin-bottom: 20px
+        }
+
+        .story-label {
+            font-size: .75rem;
+            font-weight: 700;
+            color: var(--navy);
+            background: var(--gray-100);
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-bottom: 8px
+        }
+
+        .story-text {
+            font-size: .88rem;
+            line-height: 2;
+            color: var(--gray-800)
+        }
+
+        .story-quote {
+            background: var(--off-white);
+            border-left: 3px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 16px;
+            font-style: italic;
+            font-size: .88rem;
+            line-height: 2;
+            color: var(--gray-600)
+        }
+
+        .story-quote::before {
+            content: '💬 ';
+            font-style: normal
+        }
+
+        /* 変化まとめ */
+        .change-summary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-200)
+        }
+
+        .change-item {
+            text-align: center;
+            padding: 12px 8px
+        }
+
+        .change-item-label {
+            font-size: .65rem;
+            font-weight: 700;
+            color: var(--gray-400);
+            letter-spacing: .05em;
+            margin-bottom: 4px
+        }
+
+        .change-item-value {
+            font-size: .85rem;
+            font-weight: 700;
+            color: var(--navy)
+        }
+
+        /* ===== 共通パターン ===== */
+        .common-section {
+            padding: 40px 0
+        }
+
+        .common-list {
+            list-style: none;
+            counter-reset: common
+        }
+
+        .common-item {
+            counter-increment: common;
+            display: flex;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--gray-100)
+        }
+
+        .common-item:last-child {
+            border-bottom: none
+        }
+
+        .common-item::before {
+            content: counter(common);
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .75rem;
+            font-weight: 800;
+            margin-top: 2px
+        }
+
+        .common-item-text {
+            font-size: .88rem;
+            line-height: 1.8
+        }
+
+        .common-item-text strong {
+            color: var(--navy)
+        }
+
+        /* ===== 15分面談 ===== */
+        .consultation {
+            background: linear-gradient(135deg, var(--navy), var(--navy-light));
+            color: var(--white);
+            padding: 48px 24px;
+            border-radius: 16px;
+            margin: 40px 0;
+            text-align: center
+        }
+
+        .consultation h2 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 8px
+        }
+
+        .consultation p {
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .7);
+            line-height: 1.9;
+            margin-bottom: 16px
+        }
+
+        .consultation-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 24px 0
+        }
+
+        .consultation-step {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 12px;
+            padding: 16px 12px;
+            text-align: center
+        }
+
+        .consultation-step-num {
+            font-size: .65rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            letter-spacing: .1em;
+            margin-bottom: 4px
+        }
+
+        .consultation-step-icon {
+            font-size: 1.5rem;
+            margin-bottom: 4px
+        }
+
+        .consultation-step-text {
+            font-size: .75rem;
+            color: rgba(255, 255, 255, .8);
+            line-height: 1.6
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            text-align: center;
+            padding: 48px 24px;
+            background: var(--off-white);
+            border-radius: 16px;
+            margin: 40px 0
+        }
+
+        .cta-section h2 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--navy)
+        }
+
+        .cta-section p {
+            font-size: .85rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 20px
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 18px 48px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--line-green), #00b74a);
+            border: none;
+            border-radius: 100px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(6, 199, 85, .25)
+        }
+
+        .cta-note {
+            font-size: .75rem;
+            color: var(--gray-400);
+            margin-top: 8px
+        }
+
+        /* ===== フッター ===== */
+        .pdf-footer {
+            text-align: center;
+            padding: 32px 0;
+            border-top: 1px solid var(--gray-200);
+            margin-top: 40px
+        }
+
+        .pdf-footer p {
+            font-size: .7rem;
+            color: var(--gray-400)
+        }
+
+        /* ====== 印刷用スタイル (A4 100%向け最適化) ===== */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 12mm;
+            }
+
+            html,
+            body {
+                width: 100%;
+                font-size: 14px;
+                background: #fff;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            /* 余白とレイアウトの最適化 */
+            .page {
+                max-width: none !important;
+                padding: 0 10mm !important;
+            }
+
+            .section,
+            .common-section {
+                padding: 15mm 0 !important;
+                page-break-inside: avoid;
+            }
+
+            /* 余分な余白をカット */
+            .mb-48 {
+                margin-bottom: 24px !important;
+            }
+
+            .mb-32 {
+                margin-bottom: 16px !important;
+            }
+
+            /* 改ページ設定 */
+            .cover {
+                height: 297mm;
+                /* A4縦の高さ */
+                min-height: auto !important;
+                padding: 0 !important;
+                margin: -12mm -12mm 0 -12mm !important;
+                /* ページマージンを相殺して全面背景に */
+                page-break-after: always;
+                page-break-inside: avoid;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .toc {
+                padding-top: 15mm !important;
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+
+            /* カード類がページを跨がないようにする */
+            .case,
+            .consultation,
+            .cta-section {
+                page-break-inside: avoid;
+                margin-bottom: 5mm;
+            }
+
+            .case-body {
+                padding: 20px 16px !important;
+            }
+
+            /* 印刷時のフォントサイズや行間微調整 */
+            .story-text {
+                font-size: .85rem;
+                line-height: 1.8;
+            }
+
+            h1 {
+                font-size: 1.8rem !important;
+            }
+
+            .section-title {
+                font-size: 1.25rem !important;
+            }
+
+            /* ボタン・リンクの調整 */
+            .cta-btn {
+                background: var(--line-green) !important;
+                color: var(--white) !important;
+                box-shadow: none !important;
+            }
+
+            a {
+                text-decoration: none !important;
+                color: inherit;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== 表紙 ===== -->
+    <section class="cover">
+        <div class="cover-inner">
+            <div class="cover-label">無料配布 ─ 事例集PDF</div>
+            <h1>環境を変えたら<br><span class="em">収入が2倍になった</span><br>3名のリアルストーリー</h1>
+            <p class="cover-sub">手取り25万→月収50万。製造業→月60万。営業→月80〜90万。<br>特別な才能があったわけじゃない。<br>「自分の適性を知り、環境を変えた」だけです。</p>
+            <div class="cover-author">
+                <div class="cover-author-icon">み</div>
+                <div class="cover-author-info">
+                    <strong>みだ｜15分の面談で人生変わるかも</strong>
+                    元商社勤務 → キャリア支援・業務委託マッチング
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 目次 ===== -->
+    <section class="toc">
+        <div class="page">
+            <h2 class="section-title">📖 目次</h2>
+            <div class="divider"></div>
+            <ol class="toc-list">
+                <li>はじめに ── この事例集を作った理由</li>
+                <li>事例① 東京・20代男性 ── 手取り25万→月収50万超</li>
+                <li>事例② 岐阜・40代男性 ── 製造業→業務委託で月60万</li>
+                <li>事例③ 大阪・30代 ── 営業コンサル＋映像制作で月80〜90万</li>
+                <li>3名に共通していた「最初の一歩」</li>
+                <li>「15分キャリア面談」で実際にやること</li>
+                <li>まずは15分、話してみませんか？</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ===== はじめに ===== -->
+    <section class="section">
+        <div class="page">
+            <div class="section-num">01</div>
+            <h2 class="section-title">はじめに</h2>
+            <div class="divider"></div>
+            <p class="story-text">
+                この事例集を手に取ってくださり、ありがとうございます。みだです。
+            </p>
+            <p class="story-text" style="margin-top:12px">
+                僕は元々、商社で働いていました。給料も悪くなかったし、クビになるような仕事の仕方はしていなかったと思います。でも、ずっとモヤモヤしていました。「これ、俺じゃなくてもできるよな」って。
+            </p>
+            <p class="story-text" style="margin-top:12px">
+                今はキャリア支援をしています。業務委託の案件マッチングとキャリア相談を通じて、「能力はあるのに、環境のせいで力を発揮できていない人」に、新しい選択肢を届ける仕事です。
+            </p>
+            <p class="story-text" style="margin-top:12px">
+                この事例集では、実際に提携先のキャリアアドバイザー（プロ）に相談をしてくれた3名のリアルなストーリーを紹介しています。3名に共通しているのは、<strong>特別な才能があったわけじゃない</strong>ということ。「プロとの15分の面談で自分の適性が見えた」そこからすべてが動き出しました。
+            </p>
+            <p class="story-text" style="margin-top:12px">
+                「自分にもできるかも」──そう思ってもらえたら、この事例集を作った意味があります。
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== 事例① ===== -->
+    <section class="section section--off">
+        <div class="page">
+            <div class="section-num">02</div>
+            <h2 class="section-title">事例① 「2ヶ月で人生が変わった」</h2>
+            <div class="divider"></div>
+
+            <div class="case">
+                <div class="case-header">
+                    <div class="case-num">01</div>
+                    <div class="case-header-text">
+                        <small>東京都在住｜20代男性｜元・正社員（営業職）</small>
+                        <strong>手取り25万 → 月収50万超（2ヶ月）</strong>
+                    </div>
+                </div>
+                <div class="case-body">
+                    <div class="ba">
+                        <div class="ba-box ba-before">
+                            <div class="ba-label">BEFORE</div>
+                            <div class="ba-value">手取り25万円<small>正社員・営業職</small></div>
+                        </div>
+                        <div class="ba-arrow">→</div>
+                        <div class="ba-box ba-after">
+                            <div class="ba-label">AFTER</div>
+                            <div class="ba-value">月収50万円超<small>営業コンサル＋副業</small></div>
+                        </div>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="story-label">😔 相談前の状況</div>
+                        <p class="story-text">
+                            都内のIT企業で営業職として3年間勤務。月の手取りは25万円前後。同期の中でも成績は悪くなかったが、昇給は年に数千円程度。「このまま10年働いても、生活が劇的に変わるイメージが湧かない」と漠然とした不安を抱えていた。
+                        </p>
+                        <p class="story-text" style="margin-top:8px">
+                            転職サイトを見ても、どれも似たような条件ばかり。「転職してもあまり変わらないのでは」と感じて、行動に移せずにいた。</p>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="story-label">💡 15分の面談で見えたこと</div>
+                        <p class="story-text">
+                            キャリアアドバイザーとの面談で「営業力そのものが商品になる」と言われたのが転機だった。会社では「営業=会社のために売る」というフレームでしか考えられなかったが、フリーランスの営業コンサルタントとして、その力を直接クライアントに提供するという選択肢が見えた。
+                        </p>
+                        <p class="story-text" style="margin-top:8px">
+                            特に、BtoB営業のスキルがそのまま「営業代行・営業コンサル」として高単価で売れることに本人が一番驚いていた。</p>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="story-label">🚀 具体的なステップ</div>
+                        <p class="story-text">
+                            <strong>1ヶ月目：</strong>退職前に副業として営業コンサル案件を1件受注。会社の営業と並行しながら実績を作った。<br>
+                            <strong>2ヶ月目：</strong>退職後、営業コンサル案件を3件に拡大。同時に、以前から興味のあった副業でさらに月10万円の収入を確保。<br>
+                            <strong>現在：</strong>営業コンサル月40万＋副業月10〜15万で、月収50万円超を安定的に維持。
+                        </p>
+                    </div>
+
+                    <div class="story-quote">
+                        「自分の価値を知れたことが一番大きかった。会社にいたときは"月収25万の人間"だと思い込んでいた。でも市場では自分のスキルにもっと値段がつくと知って、世界が変わりました」
+                    </div>
+
+                    <div class="change-summary">
+                        <div class="change-item">
+                            <div class="change-item-label">収入</div>
+                            <div class="change-item-value">25万 → 50万超</div>
+                        </div>
+                        <div class="change-item">
+                            <div class="change-item-label">期間</div>
+                            <div class="change-item-value">2ヶ月</div>
+                        </div>
+                        <div class="change-item">
+                            <div class="change-item-label">キーワード</div>
+                            <div class="change-item-value">営業力の再発見</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 事例② ===== -->
+    <section class="section">
+        <div class="page">
+            <div class="section-num">03</div>
+            <h2 class="section-title">事例② 「40代でも遅くなかった」</h2>
+            <div class="divider"></div>
+
+            <div class="case">
+                <div class="case-header">
+                    <div class="case-num">02</div>
+                    <div class="case-header-text">
+                        <small>岐阜県在住｜40代男性｜元・製造業勤務</small>
+                        <strong>年収350万 → 業務委託で月60万</strong>
+                    </div>
+                </div>
+                <div class="case-body">
+                    <div class="ba">
+                        <div class="ba-box ba-before">
+                            <div class="ba-label">BEFORE</div>
+                            <div class="ba-value">年収350万円<small>製造業・正社員</small></div>
+                        </div>
+                        <div class="ba-arrow">→</div>
+                        <div class="ba-box ba-after">
+                            <div class="ba-label">AFTER</div>
+                            <div class="ba-value">月60万円<small>業務委託マッチング</small></div>
+                        </div>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="story-label">😔 相談前の状況</div>
+                        <p class="story-text">
+                            岐阜県の製造業で20年以上勤務。年収は350万円程度で、ここ数年は昇給もほぼなし。「40代で転職は厳しい」と諦めかけていた。工場のライン管理をしていたが、「この先定年まで同じことを続けるのか」というモヤモヤが消えなかった。
+                        </p>
+                        <p class="story-text" style="margin-top:8px">家族もいるため、リスクのある行動は取れない。でも現状を変えたい。そんな板挟みの中で相談に来てくれた。
+                        </p>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="story-label">💡 15分の面談で見えたこと</div>
+                        <p class="story-text">
+                            面談で丁寧にスキルの棚卸しをした結果、「生産管理」「品質管理」「工程改善」のスキルが、製造業のコンサルティング案件で非常に高く評価されることがわかった。</p>
+                        <p class="story-text" style="margin-top:8px">
+                            本人は「工場で働いているだけ」と思っていたが、実は20年で培った現場知識は、製造業のDXや改善コンサルの現場で引く手あまたの希少スキルだった。</p>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="story-label">🚀 具体的なステップ</div>
+                        <p class="story-text">
+                            <strong>1ヶ月目：</strong>退職前に業務委託案件の情報収集と面談を実施。製造業向けの業務改善コンサルタントとしてのポジションを確認。<br>
+                            <strong>2〜3ヶ月目：</strong>退職後、業務委託案件を開始。生産管理の知見を活かした工場改善のプロジェクトに参画。<br>
+                            <strong>現在：</strong>月60万円の業務委託を安定的に受注。地方在住のままリモートワーク中心で活動。出張は月に数回程度。
+                        </p>
+                    </div>
+
+                    <div class="story-quote">
+                        「40代で何ができるのかと不安だったけど、自分でも気づかなかった強みが見つかった。年齢は関係なかった。20年の経験が、そのまま武器になるとは思わなかったです」
+                    </div>
+
+                    <div class="change-summary">
+                        <div class="change-item">
+                            <div class="change-item-label">収入</div>
+                            <div class="change-item-value">年収350万 → 月60万</div>
+                        </div>
+                        <div class="change-item">
+                            <div class="change-item-label">期間</div>
+                            <div class="change-item-value">約3ヶ月</div>
+                        </div>
+                        <div class="change-item">
+                            <div class="change-item-label">キーワード</div>
+                            <div class="change-item-value">経験の再評価</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 事例③ ===== -->
+    <section class="section section--off">
+        <div class="page">
+            <div class="section-num">04</div>
+            <h2 class="section-title">事例③ 「好きを仕事にしたら、収入もついてきた」</h2>
+            <div class="divider"></div>
+
+            <div class="case">
+                <div class="case-header">
+                    <div class="case-num">03</div>
+                    <div class="case-header-text">
+                        <small>大阪府在住｜30代｜元・営業コンサルタント</small>
+                        <strong>営業コンサル → 月80〜90万（100万目前）</strong>
+                    </div>
+                </div>
+                <div class="case-body">
+                    <div class="ba">
+                        <div class="ba-box ba-before">
+                            <div class="ba-label">BEFORE</div>
+                            <div class="ba-value">営業コンサル<small>やりがいに悩む日々</small></div>
+                        </div>
+                        <div class="ba-arrow">→</div>
+                        <div class="ba-box ba-after">
+                            <div class="ba-label">AFTER</div>
+                            <div class="ba-value">月80〜90万円<small>営業コンサル＋映像制作</small></div>
+                        </div>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="story-label">😔 相談前の状況</div>
+                        <p class="story-text">
+                            大阪で営業コンサルタントとして独立していたが、収入は30〜40万円程度。営業の仕事はこなせるが、「本当にやりたいことなのか」という疑問を持ち続けていた。趣味で映像制作をしていたが、「趣味を仕事にするなんて甘い」と自分でブレーキをかけていた。
+                        </p>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="story-label">💡 15分の面談で見えたこと</div>
+                        <p class="story-text">
+                            面談で「やりたいこと」と「できること」のマトリクスを整理。営業コンサルのスキルはそのまま活かしつつ、映像制作を「もう一つの収入の柱」にする戦略を設計した。</p>
+                        <p class="story-text" style="margin-top:8px">
+                            重要だったのは「営業力×映像制作」のかけ合わせ。映像制作のスキルだけでは差別化が難しいが、「営業もできる映像クリエイター」は市場で圧倒的に少なく、高単価で受注できるポジションだった。
+                        </p>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="story-label">🚀 具体的なステップ</div>
+                        <p class="story-text">
+                            <strong>1ヶ月目：</strong>営業コンサル案件を高単価なものに絞り込み、空いた時間で映像制作の案件を開始。<br>
+                            <strong>2〜3ヶ月目：</strong>営業コンサル月50万＋映像制作月20万を達成。<br>
+                            <strong>現在：</strong>営業コンサル月50〜60万＋映像制作月30万で、月80〜90万円。100万円が見えてきている。
+                        </p>
+                    </div>
+
+                    <div class="story-quote">
+                        「得意な営業と好きな映像制作を掛け合わせたら、月80万を超えました。100万が見えてきたのは自分でも驚き。"やりたい"と"できる"をちゃんと分析してもらえたのが大きかった」
+                    </div>
+
+                    <div class="change-summary">
+                        <div class="change-item">
+                            <div class="change-item-label">収入</div>
+                            <div class="change-item-value">30〜40万 → 80〜90万</div>
+                        </div>
+                        <div class="change-item">
+                            <div class="change-item-label">期間</div>
+                            <div class="change-item-value">約3ヶ月</div>
+                        </div>
+                        <div class="change-item">
+                            <div class="change-item-label">キーワード</div>
+                            <div class="change-item-value">スキルのかけ算</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 共通パターン ===== -->
+    <section class="section">
+        <div class="page">
+            <div class="section-num">05</div>
+            <h2 class="section-title">3名に共通していた「最初の一歩」</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">3名の事例を振り返ると、成功した人には明確な共通パターンがありました。</p>
+
+            <ol class="common-list">
+                <li class="common-item">
+                    <div class="common-item-text">
+                        <strong>「自分には大したスキルがない」と思い込んでいた</strong><br>3名とも、面談前は「自分にできることは限られている」と思っていました。でもスキルの棚卸しをすると、本人が気づいていない強みが必ず見つかります。
+                    </div>
+                </li>
+                <li class="common-item">
+                    <div class="common-item-text">
+                        <strong>「15分の面談」で、自分の市場価値を知った</strong><br>自分の能力が「会社の中」ではなく「市場」でどう評価されるかを知ることが最大の転機でした。多くの人は、自分の市場価値を正しく把握できていません。
+                    </div>
+                </li>
+                <li class="common-item">
+                    <div class="common-item-text">
+                        <strong>いきなり転職・独立したわけじゃない</strong><br>3名とも、最初は情報収集から始めています。「すぐ辞めろ」なんて言いません。まず選択肢を知り、リスクを最小限にして動くのが鉄則です。
+                    </div>
+                </li>
+                <li class="common-item">
+                    <div class="common-item-text">
+                        <strong>環境を変えただけで、能力はそのまま</strong><br>新しいスキルを身につけたわけではありません。すでに持っていた能力を、それが正当に評価される環境に持っていっただけです。
+                    </div>
+                </li>
+                <li class="common-item">
+                    <div class="common-item-text">
+                        <strong>一人で考え込まず、第三者に相談した</strong><br>自分の強みは自分では見えにくい。だからこそ、第三者の視点で「あなたの強みはここです」と指摘してもらうことに価値があります。
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ===== 15分面談 ===== -->
+    <section class="section section--off">
+        <div class="page">
+            <div class="section-num">06</div>
+            <h2 class="section-title">プロの「15分キャリア面談」で<br>実際にやること</h2>
+            <div class="divider"></div>
+
+            <div class="consultation">
+                <h2>15分で何が変わるの？</h2>
+                <p>「15分で人生が変わる」なんて大げさに聞こえるかもしれません。<br>でも実際にやることはシンプルです。</p>
+                <div class="consultation-steps">
+                    <div class="consultation-step">
+                        <div class="consultation-step-num">STEP 01</div>
+                        <div class="consultation-step-icon">📋</div>
+                        <div class="consultation-step-text">あなたのスキル・経験を<br><strong>棚卸し</strong></div>
+                    </div>
+                    <div class="consultation-step">
+                        <div class="consultation-step-num">STEP 02</div>
+                        <div class="consultation-step-icon">🔍</div>
+                        <div class="consultation-step-text">市場での<br><strong>適性を分析</strong></div>
+                    </div>
+                    <div class="consultation-step">
+                        <div class="consultation-step-num">STEP 03</div>
+                        <div class="consultation-step-icon">🗺️</div>
+                        <div class="consultation-step-text">あなたに合った<br><strong>選択肢を提示</strong></div>
+                    </div>
+                </div>
+                <p style="font-size:.8rem;color:rgba(255,255,255,.5)">※ 無料・営業連絡なし・「合わないな」と思ったらそのまま終了でOKです</p>
+            </div>
+
+            <p class="story-text">面談では「転職しなさい」「独立しなさい」とは絶対に言いません。</p>
+            <p class="story-text" style="margin-top:8px">あなたの現在の状況、スキル、やりたいこと、不安を聞いた上で、「こういう選択肢もありますよ」と情報をお伝えするだけです。</p>
+            <p class="story-text" style="margin-top:8px">その情報をどう使うかは、あなた次第。でも「知っている」と「知らない」では、その後のキャリアに大きな差が出ます。</p>
+            <p class="story-text" style="margin-top:8px">もちろん、面談は人材・キャリアのプロフェッショナルが担当するので安心してください。</p>
+            <p class="story-text" style="margin-top:8px"><strong>この事例集の3名も、全員この15分のプロとの面談から始まりました。</strong></p>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section">
+        <div class="page">
+            <div class="section-num">07</div>
+            <h2 class="section-title" style="text-align:center">まずは15分、<br>話してみませんか？</h2>
+            <div class="divider" style="margin:12px auto 24px"></div>
+
+            <div class="cta-section">
+                <h2>💬 LINEで無料相談する</h2>
+                <p>「ちょっと話を聞いてみたい」だけでOKです。<br>提携するキャリアのプロが直接お返事します。事例集を読んで気になったこと、<br>あなたの今の状況…何でもお気軽にどうぞ。</p>
+                <a href="https://lin.ee/0tjfm9R" class="cta-btn" target="_blank" rel="noopener">💬 LINEで無料相談する</a>
+                <p class="cta-note">※ 無料・営業連絡なし</p>
+            </div>
+            <p class="story-text" style="text-align:center;margin-top:24px">
+                半年前に相談に来てくれた方も、<br>最初は「ちょっと話を聞いてみよう」から始まりました。<br><br>
+                <strong>あなたの「最初の一歩」を、お待ちしています。</strong>
+            </p>
+        </div>
+    </section>
+
+    <footer class="pdf-footer">
+        <div class="page">
+            <p>この事例集は「みだ｜15分の面談で人生変わるかも」が制作しました。</p>
+            <p>© 2026 liasom works. 無断転載・再配布はご遠慮ください。</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

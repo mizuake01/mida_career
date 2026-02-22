@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>liasom works｜あなたの能力に見合った働き方を見つける</title>
+  <meta name="description" content="能力はあるのに評価されない。報酬が見合わない。そんなあなたに、業務委託マッチング×キャリア相談で新しい選択肢を届けます。3名の収入アップ事例集を無料配布中。">
+  <meta property="og:title" content="liasom works｜あなたの能力に見合った働き方を見つける">
+  <meta property="og:description" content="手取り25万→月収50万。製造業→月60万。3名のリアルな収入アップストーリーを無料公開中。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="ogp.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ===== リセット＆ベース ===== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #1a1a2e;
+      background: #fff;
+      line-height: 1.8;
+      overflow-x: hidden
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    /* ===== カラートークン ===== */
+    :root {
+      --navy: #0f1b3d;
+      --navy-light: #1a2d5a;
+      --blue: #2a4a8a;
+      --blue-light: #3a6bc5;
+      --accent: #d4872e;
+      --accent-light: #e8a650;
+      --accent-glow: rgba(212, 135, 46, .25);
+      --gold: #c9a84c;
+      --white: #ffffff;
+      --off-white: #f7f6f3;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-600: #4b5563;
+      --gray-800: #1f2937;
+      --success: #10b981;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow: 0 4px 24px rgba(15, 27, 61, .08);
+      --shadow-lg: 0 12px 48px rgba(15, 27, 61, .12);
+    }
+
+    /* ===== ユーティリティ ===== */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    .section {
+      padding: 72px 0
+    }
+
+    .section--navy {
+      background: var(--navy);
+      color: var(--white)
+    }
+
+    .section--off {
+      background: var(--off-white)
+    }
+
+    .section--gradient {
+      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white)
+    }
+
+    .text-center {
+      text-align: center
+    }
+
+    .text-accent {
+      color: var(--accent)
+    }
+
+    .text-gold {
+      color: var(--gold)
+    }
+
+    .mb-8 {
+      margin-bottom: 8px
+    }
+
+    .mb-16 {
+      margin-bottom: 16px
+    }
+
+    .mb-24 {
+      margin-bottom: 24px
+    }
+
+    .mb-32 {
+      margin-bottom: 32px
+    }
+
+    .mb-48 {
+      margin-bottom: 48px
+    }
+
+    /* ===== セクションヘッダー ===== */
+    .section-label {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 16px
+    }
+
+    .section-label--accent {
+      background: rgba(212, 135, 46, .12);
+      color: var(--accent)
+    }
+
+    .section-label--white {
+      background: rgba(255, 255, 255, .12);
+      color: rgba(255, 255, 255, .8)
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: 1.5;
+      margin-bottom: 16px
+    }
+
+    .section-subtitle {
+      font-size: .95rem;
+      color: var(--gray-600);
+      line-height: 1.8
+    }
+
+    .section--navy .section-subtitle {
+      color: rgba(255, 255, 255, .7)
+    }
+
+    /* ===== CTAボタン ===== */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 18px 40px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all .3s;
+      box-shadow: 0 4px 20px var(--accent-glow);
+      text-align: center;
+      width: 100%;
+      max-width: 420px
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px var(--accent-glow)
+    }
+
+    .cta-btn--outline {
+      background: transparent;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      box-shadow: none
+    }
+
+    .cta-btn--outline:hover {
+      background: var(--accent);
+      color: var(--white)
+    }
+
+    .cta-btn--line {
+      background: linear-gradient(135deg, #06c755, #00b74a);
+      box-shadow: 0 4px 20px rgba(6, 199, 85, .25)
+    }
+
+    .cta-btn--line:hover {
+      box-shadow: 0 8px 32px rgba(6, 199, 85, .35)
+    }
+
+    .cta-sub {
+      font-size: .8rem;
+      color: var(--gray-400);
+      margin-top: 8px
+    }
+
+    .section--navy .cta-sub {
+      color: rgba(255, 255, 255, .5)
+    }
+
+    /* ===== フローティングCTA ===== */
+    .floating-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 12px 16px;
+      background: rgba(15, 27, 61, .95);
+      backdrop-filter: blur(12px);
+      transform: translateY(100%);
+      transition: transform .4s;
+      border-top: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    .floating-cta.visible {
+      transform: translateY(0)
+    }
+
+    .floating-cta .cta-btn {
+      width: 100%;
+      max-width: 100%;
+      padding: 14px 24px;
+      font-size: .9rem
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 80px
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, var(--navy) 0%, #0a1228 60%, var(--navy-light) 100%)
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(42, 74, 138, .3), transparent 70%);
+      animation: pulse 8s ease-in-out infinite
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: .5
+      }
+
+      50% {
+        transform: scale(1.1);
+        opacity: .8
+      }
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(212, 135, 46, .15);
+      border: 1px solid rgba(212, 135, 46, .3);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--accent-light);
+      margin-bottom: 24px
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: blink 2s infinite
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .3
+      }
+    }
+
+    .hero h1 {
+      font-size: 1.75rem;
+      font-weight: 900;
+      line-height: 1.5;
+      color: var(--white);
+      margin-bottom: 20px
+    }
+
+    .hero h1 .highlight {
+      display: inline;
+      background: linear-gradient(transparent 60%, rgba(212, 135, 46, .3) 60%)
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, .7);
+      line-height: 1.9;
+      margin-bottom: 36px
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 40px
+    }
+
+    .hero-stat {
+      text-align: center;
+      padding: 16px 8px;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: var(--radius)
+    }
+
+    .hero-stat-num {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--accent-light)
+    }
+
+    .hero-stat-label {
+      font-size: .7rem;
+      color: rgba(255, 255, 255, .5);
+      margin-top: 4px
+    }
+
+    /* ===== 共感 ===== */
+    .empathy-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .empathy-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 20px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      transition: all .3s;
+      opacity: 0;
+      transform: translateY(16px)
+    }
+
+    .empathy-item.visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    .empathy-item:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow)
+    }
+
+    .empathy-check {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(212, 135, 46, .1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: .8rem;
+      margin-top: 2px
+    }
+
+    .empathy-text {
+      font-size: .9rem;
+      line-height: 1.7;
+      color: var(--gray-800)
+    }
+
+    /* ===== 問題提起 ===== */
+    .problem-box {
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px
+    }
+
+    .problem-box p {
+      font-size: .95rem;
+      line-height: 2;
+      color: rgba(255, 255, 255, .8)
+    }
+
+    .problem-highlight {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--accent-light);
+      margin: 16px 0
+    }
+
+    /* ===== 事例カード ===== */
+    .case-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 24px
+    }
+
+    .case-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--gray-200)
+    }
+
+    .case-header {
+      padding: 20px 24px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 16px
+    }
+
+    .case-num {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(212, 135, 46, .2);
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      font-weight: 800;
+      color: var(--accent-light)
+    }
+
+    .case-meta {
+      font-size: .8rem;
+      color: rgba(255, 255, 255, .6)
+    }
+
+    .case-meta strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--white);
+      margin-top: 2px
+    }
+
+    .case-body {
+      padding: 24px
+    }
+
+    .case-ba {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 20px
+    }
+
+    .case-before,
+    .case-after {
+      padding: 16px;
+      border-radius: var(--radius);
+      text-align: center
+    }
+
+    .case-before {
+      background: var(--gray-100)
+    }
+
+    .case-after {
+      background: rgba(212, 135, 46, .08)
+    }
+
+    .case-ba-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      color: var(--gray-400);
+      margin-bottom: 6px
+    }
+
+    .case-after .case-ba-label {
+      color: var(--accent)
+    }
+
+    .case-ba-value {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--gray-800)
+    }
+
+    .case-after .case-ba-value {
+      color: var(--accent)
+    }
+
+    .case-arrow {
+      font-size: 1.2rem;
+      color: var(--accent);
+      font-weight: 900
+    }
+
+    .case-quote {
+      font-size: .9rem;
+      line-height: 1.8;
+      color: var(--gray-600);
+      border-left: 3px solid var(--accent);
+      padding-left: 16px;
+      font-style: italic
+    }
+
+    /* ===== 特徴 ===== */
+    .feature-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px
+    }
+
+    .feature-card {
+      padding: 28px 24px;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: var(--radius-lg);
+      transition: all .3s
+    }
+
+    .feature-card:hover {
+      background: rgba(255, 255, 255, .08);
+      border-color: rgba(255, 255, 255, .2)
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 16px
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px
+    }
+
+    .feature-card p {
+      font-size: .85rem;
+      color: rgba(255, 255, 255, .65);
+      line-height: 1.8
+    }
+
+    /* ===== PDF紹介 ===== */
+    .pdf-preview {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200)
+    }
+
+    .pdf-toc {
+      list-style: none;
+      margin: 24px 0
+    }
+
+    .pdf-toc li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: .9rem;
+      color: var(--gray-800)
+    }
+
+    .pdf-toc li::before {
+      content: '📄';
+      font-size: .85rem
+    }
+
+    .pdf-toc li:last-child {
+      border-bottom: none
+    }
+
+    /* ===== フォーム ===== */
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px 24px;
+      box-shadow: var(--shadow-lg)
+    }
+
+    .form-group {
+      margin-bottom: 20px
+    }
+
+    .form-group label {
+      display: block;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 6px
+    }
+
+    .form-group label .required {
+      font-size: .7rem;
+      color: var(--accent);
+      margin-left: 4px
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: .95rem;
+      font-family: inherit;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius);
+      background: var(--gray-50);
+      transition: all .3s;
+      outline: none
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue-light);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(42, 74, 138, .1)
+    }
+
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical
+    }
+
+    .form-note {
+      font-size: .75rem;
+      color: var(--gray-400);
+      margin-top: 4px
+    }
+
+    /* ===== LINE ===== */
+    .line-section {
+      text-align: center
+    }
+
+    .line-icon {
+      font-size: 3rem;
+      margin-bottom: 12px
+    }
+
+    .or-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 32px 0;
+      color: var(--gray-400);
+      font-size: .85rem
+    }
+
+    .or-divider::before,
+    .or-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gray-200)
+    }
+
+    /* ===== 追伸 ===== */
+    .ps-box {
+      background: linear-gradient(135deg, rgba(212, 135, 46, .06), rgba(212, 135, 46, .02));
+      border: 1px solid rgba(212, 135, 46, .15);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px
+    }
+
+    .ps-label {
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 12px
+    }
+
+    .ps-box p {
+      font-size: .9rem;
+      line-height: 2;
+      color: var(--gray-800)
+    }
+
+    /* ===== FAQ ===== */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all .3s
+    }
+
+    .faq-item.open {
+      border-color: var(--blue-light);
+      box-shadow: var(--shadow)
+    }
+
+    .faq-q {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 20px;
+      cursor: pointer;
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--gray-800);
+      user-select: none
+    }
+
+    .faq-q::before {
+      content: 'Q';
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      font-weight: 800
+    }
+
+    .faq-q::after {
+      content: '+';
+      margin-left: auto;
+      font-size: 1.2rem;
+      color: var(--gray-400);
+      transition: transform .3s
+    }
+
+    .faq-item.open .faq-q::after {
+      transform: rotate(45deg);
+      color: var(--accent)
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease
+    }
+
+    .faq-a-inner {
+      padding: 0 20px 20px 60px;
+      font-size: .85rem;
+      line-height: 1.8;
+      color: var(--gray-600)
+    }
+
+    /* ===== フッター ===== */
+    .footer {
+      padding: 40px 0;
+      background: var(--navy);
+      text-align: center
+    }
+
+    .footer p {
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .4)
+    }
+
+    /* ===== レスポンシブ ===== */
+    @media(min-width:640px) {
+      .hero h1 {
+        font-size: 2.2rem
+      }
+
+      .section-title {
+        font-size: 1.75rem
+      }
+
+      .case-ba {
+        gap: 16px
+      }
+
+      .form-card {
+        padding: 48px 40px
+      }
+
+      .container {
+        padding: 0 32px
+      }
+
+      .section {
+        padding: 96px 0
+      }
+    }
+
+    @media(min-width:768px) {
+      .hero h1 {
+        font-size: 2.5rem
+      }
+
+      .feature-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== フローティングCTA ===== -->
+  <div class="floating-cta" id="floatingCta">
+    <a href="https://lin.ee/0tjfm9R" target="_blank" rel="noopener" class="cta-btn cta-btn--line">� LINEでみだに相談する</a>
+  </div>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-badge"><span>事例集PDF 無料配布中</span></div>
+      <h1>あなたの能力、<br><span class="highlight">今の報酬に見合っていますか？</span></h1>
+      <p class="hero-sub">
+        元商社勤務の「みだ」です。今はキャリア支援をしています。<br>頑張っているのに評価されない。能力に見合った報酬をもらえていない。<br>それは、あなたの問題じゃない。<strong>環境のミスマッチ</strong>かもしれません。
+      </p>
+      <div class="text-center">
+        <a href="https://lin.ee/0tjfm9R" target="_blank" rel="noopener" class="cta-btn cta-btn--line">�
+          まずは15分、みだに相談してみる</a>
+        <p class="cta-sub">※ LINEで気軽に相談できます・無料</p>
+        <a href="#form" class="cta-btn cta-btn--outline" style="margin-top:12px;font-size:.85rem;padding:12px 24px">📄
+          事例集PDFをメールで受け取る</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">90%</div>
+          <div class="hero-stat-label">相談者満足度</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">2ヶ月</div>
+          <div class="hero-stat-label">最短収入UP</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">全国</div>
+          <div class="hero-stat-label">Web面談対応</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 共感 ===== -->
+  <section class="section" id="empathy">
+    <div class="container">
+      <div class="text-center mb-48">
+        <span class="section-label section-label--accent">Check</span>
+        <h2 class="section-title">こんなこと、感じていませんか？</h2>
+        <p class="section-subtitle">一つでも当てはまるなら、この先を読んでみてください。</p>
+      </div>
+      <div class="empathy-list">
+        <div class="empathy-item"><span class="empathy-check">✓</span><span
+            class="empathy-text">毎日頑張ってるのに、昇給は年に数千円。努力が報われていない気がする</span></div>
+        <div class="empathy-item"><span class="empathy-check">✓</span><span
+            class="empathy-text">「この仕事、自分じゃなくてもできるよな」と思う瞬間がある</span></div>
+        <div class="empathy-item"><span class="empathy-check">✓</span><span
+            class="empathy-text">上司や同僚との関係に気を遣いすぎて、本来の仕事に集中できない</span></div>
+        <div class="empathy-item"><span class="empathy-check">✓</span><span
+            class="empathy-text">転職サイトを見るけど、どれも似たり寄ったりで踏み出せない</span></div>
+        <div class="empathy-item"><span class="empathy-check">✓</span><span
+            class="empathy-text">同い年の友人がどんどん年収を上げていくのを見て、焦りを感じる</span></div>
+        <div class="empathy-item"><span class="empathy-check">✓</span><span
+            class="empathy-text">「自分にはもっとできることがあるはず」と思うのに、活かせる場がない</span></div>
+        <div class="empathy-item"><span class="empathy-check">✓</span><span
+            class="empathy-text">時短やリモートで働きたいのに、「制度がない」で片付けられる</span></div>
+        <div class="empathy-item"><span class="empathy-check">✓</span><span
+            class="empathy-text">独立も気になるけど、リスクが怖くて情報収集止まりになっている</span></div>
+        <div class="empathy-item"><span class="empathy-check">✓</span><span
+            class="empathy-text">「このまま定年まで？」と考えると、胸がざわつく</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 問題提起 ===== -->
+  <section class="section section--gradient" id="problem">
+    <div class="container">
+      <div class="text-center mb-48">
+        <span class="section-label section-label--white">Insight</span>
+        <h2 class="section-title">その"モヤモヤ"、<br>あなたのせいじゃないかもしれません。</h2>
+      </div>
+      <div class="problem-box">
+        <p>多くの人は、「自分の能力が足りないから」と思い込んでいます。</p>
+        <p>でも実際には、<strong>能力と環境のミスマッチ</strong>が原因であることがほとんどです。</p>
+        <span class="problem-highlight">あなたに足りないのは、能力ではなく「選択肢の情報」です。</span>
+        <p>正社員だけが選択肢ではありません。業務委託、案件マッチング、副業…<br>自分に合った働き方を知るだけで、見える景色は大きく変わります。</p>
+        <p style="margin-top:16px">実際に、環境を変えた3名のリアルなストーリーを紹介します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 事例 ===== -->
+  <section class="section" id="cases">
+    <div class="container">
+      <div class="text-center mb-48">
+        <span class="section-label section-label--accent">Success Stories</span>
+        <h2 class="section-title">環境を変えた3名のリアルな話</h2>
+        <p class="section-subtitle">特別な才能があったわけじゃない。「動いた」だけです。</p>
+      </div>
+      <div class="case-cards">
+
+        <!-- 事例1 -->
+        <div class="case-card">
+          <div class="case-header">
+            <div class="case-num">01</div>
+            <div><span class="case-meta">東京｜20代男性</span><strong>2ヶ月で人生が変わった</strong></div>
+          </div>
+          <div class="case-body">
+            <div class="case-ba">
+              <div class="case-before">
+                <div class="case-ba-label">BEFORE</div>
+                <div class="case-ba-value">手取り25万円<br><small style="color:var(--gray-400)">正社員</small></div>
+              </div>
+              <div class="case-arrow">→</div>
+              <div class="case-after">
+                <div class="case-ba-label">AFTER</div>
+                <div class="case-ba-value">月収50万円超<br><small>営業コンサル＋副業</small></div>
+              </div>
+            </div>
+            <p class="case-quote">
+              「毎日同じことの繰り返しで、評価もされず…。でもキャリア相談で"営業力がそのまま商品になる"と言われて、世界が変わりました。2ヶ月目で手取り25万の倍以上に。自分の価値を知れたことが一番大きかったです」</p>
+          </div>
+        </div>
+
+        <!-- 事例2 -->
+        <div class="case-card">
+          <div class="case-header">
+            <div class="case-num">02</div>
+            <div><span class="case-meta">岐阜｜40代男性</span><strong>40代でも遅くなかった</strong></div>
+          </div>
+          <div class="case-body">
+            <div class="case-ba">
+              <div class="case-before">
+                <div class="case-ba-label">BEFORE</div>
+                <div class="case-ba-value">製造業勤務<br><small style="color:var(--gray-400)">年収350万円</small></div>
+              </div>
+              <div class="case-arrow">→</div>
+              <div class="case-after">
+                <div class="case-ba-label">AFTER</div>
+                <div class="case-ba-value">月60万円<br><small>業務委託マッチング</small></div>
+              </div>
+            </div>
+            <p class="case-quote">
+              「この年齢で何ができるのかと不安でした。でも丁寧にスキルの棚卸しをしてもらい、自分でも気づかなかった強みが見つかりました。年齢は関係なかった。環境を変えただけでこんなに変わるとは思わなかったです」</p>
+          </div>
+        </div>
+
+        <!-- 事例3 -->
+        <div class="case-card">
+          <div class="case-header">
+            <div class="case-num">03</div>
+            <div><span class="case-meta">大阪｜30代</span><strong>好きを仕事にしたら、収入もついてきた</strong></div>
+          </div>
+          <div class="case-body">
+            <div class="case-ba">
+              <div class="case-before">
+                <div class="case-ba-label">BEFORE</div>
+                <div class="case-ba-value">営業コンサル<br><small style="color:var(--gray-400)">やりがいに悩む日々</small></div>
+              </div>
+              <div class="case-arrow">→</div>
+              <div class="case-after">
+                <div class="case-ba-label">AFTER</div>
+                <div class="case-ba-value">月80〜90万円<br><small>営業コンサル＋映像制作</small></div>
+              </div>
+            </div>
+            <p class="case-quote">
+              「得意な営業と好きな映像制作を掛け合わせたら、月80万を超えました。100万が見えてきたのは自分でも驚きです。"やりたい"と"できる"をちゃんと分析してもらえたのが大きかったですね」</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:40px">
+        <a href="https://lin.ee/0tjfm9R" target="_blank" rel="noopener" class="cta-btn cta-btn--line">�
+          この3名のように変わりたい方はみだに相談</a>
+        <p class="cta-sub">※ LINEで気軽に相談できます</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 特徴 ===== -->
+  <section class="section section--gradient" id="features">
+    <div class="container">
+      <div class="text-center mb-48">
+        <span class="section-label section-label--white">Features</span>
+        <h2 class="section-title">みだができること</h2>
+        <p class="section-subtitle">案件紹介だけじゃない。あなたに合った「働き方」を一緒に見つけます。</p>
+      </div>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>あなたに合った仕事をマッチング</h3>
+          <p>営業、コンサル、販売、映像制作など幅広い業務委託案件を紹介。「やりたい」と「できる」の交差点を一緒に見つけます。成果報酬型の案件もあり。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>お金だけじゃないサポート</h3>
+          <p>人間関係の悩み相談やコーチングも。都度フォローで孤立させません。全国対応のWeb面談で、まずは15分であなたの適性を一緒に整理します。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧭</div>
+          <h3>結果として、選択肢が広がる</h3>
+          <p>正社員のまま副業、業務委託へ移行、独立…最適な道を一緒に考えます。「独立しろ」とは言いません。あなたに合った選択を見つける場です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PDF紹介 ===== -->
+  <section class="section" id="pdf">
+    <div class="container">
+      <div class="text-center mb-48">
+        <span class="section-label section-label--accent">Free Download</span>
+        <h2 class="section-title">3名の収入アップストーリーを<br>事例集PDFで完全公開</h2>
+        <p class="section-subtitle">それぞれが「どんな不安を抱えていたか」「何をしたか」「結果どう変わったか」を具体的なステップ付きで収録しています。</p>
+      </div>
+      <div class="pdf-preview">
+        <p style="font-size:.85rem;font-weight:700;color:var(--navy);margin-bottom:8px">📖 事例集PDFの内容（一部）</p>
+        <ul class="pdf-toc">
+          <li>正社員・手取り25万→2ヶ月で月収50万を達成した具体的なステップ</li>
+          <li>40代・製造業から業務委託で月60万に変わるまでのキャリア棚卸し全記録</li>
+          <li>「やりたい × できる」を掛け合わせて月80〜90万を実現した方法</li>
+          <li>3名に共通していた「最初の一歩」とは？</li>
+          <li>みだのキャリア相談「15分の面談」で実際に行うこと</li>
+        </ul>
+        <div class="text-center">
+          <a href="https://lin.ee/0tjfm9R" target="_blank" rel="noopener" class="cta-btn cta-btn--line">�
+            LINEでみだに相談する（事例集も受け取れます）</a>
+          <p class="cta-sub" style="margin-top:8px"><a href="#form"
+              style="color:var(--accent);text-decoration:underline">メールで事例集PDFを受け取る方はこちら</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LINE登録（メインCTA） ===== -->
+  <section class="section section--off" id="line">
+    <div class="container">
+      <div class="text-center mb-32">
+        <span class="section-label section-label--accent">Contact</span>
+        <h2 class="section-title">まずは15分、<br>みだに相談してみませんか？</h2>
+        <p class="section-subtitle">LINEで気軽にキャリア相談ができます。<br>事例集PDFもLINEから受け取れます。</p>
+      </div>
+      <div class="form-card" style="text-align:center;padding:48px 24px">
+        <div class="line-icon" style="font-size:4rem;margin-bottom:16px">💬</div>
+        <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:8px">「ちょっと話を聞いてみたい」でOKです</h3>
+        <p style="font-size:.85rem;color:var(--gray-600);line-height:1.8;margin-bottom:24px">・ 無料・営業連絡なし<br>・
+          事例集PDFも自動でお届け<br>・ みだが直接お返事します</p>
+        <a href="https://lin.ee/0tjfm9R" target="_blank" rel="noopener" class="cta-btn cta-btn--line"
+          style="max-width:400px;margin:0 auto;font-size:1.05rem;padding:20px 40px">💬 LINEでみだに相談する</a>
+        <p class="cta-sub" style="margin-top:12px">※ 友だち追加だけではDMは届きません。お気軽にどうぞ。</p>
+      </div>
+
+      <!-- PDFフォーム（サブ導線） -->
+      <div class="or-divider">メールで受け取りたい方はこちら</div>
+      <div id="form">
+        <div class="form-card">
+          <div class="text-center mb-24">
+            <h3 style="font-size:1rem;font-weight:700">📄 事例集PDFをメールで受け取る</h3>
+            <p style="font-size:.8rem;color:var(--gray-400);margin-top:4px">30秒で完了・営業連絡なし</p>
+          </div>
+          <form id="downloadForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label>お名前<span class="required">必須</span></label>
+              <input type="text" name="name" placeholder="例：山田太郎" required>
+            </div>
+            <div class="form-group">
+              <label>メールアドレス<span class="required">必須</span></label>
+              <input type="email" name="email" placeholder="例：example@email.com" required>
+              <p class="form-note">※ PDFの送付先として使用します</p>
+            </div>
+            <div class="form-group">
+              <label>今のお仕事と一番の悩み<span style="font-size:.7rem;color:var(--gray-400);margin-left:4px">任意</span></label>
+              <textarea name="concern" placeholder="例：営業職をしていますが、成果に対して給料が低いと感じています…"></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="cta-btn" style="border:none;font-family:inherit">📄 事例集を無料で受け取る</button>
+            </div>
+          </form>
+          <div id="formSuccess" style="display:none;text-align:center;padding:40px 0">
+            <div style="font-size:3rem;margin-bottom:16px">✅</div>
+            <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:8px">ありがとうございます！</h3>
+            <p style="font-size:.9rem;color:var(--gray-600)">ご登録のメールアドレスにPDFをお送りしました。<br>届かない場合は迷惑メールフォルダもご確認ください。</p>
+            <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--gray-200)">
+              <p style="font-size:.85rem;color:var(--gray-600);margin-bottom:12px">💬 みだに直接相談したい方はLINEからどうぞ</p>
+              <a href="https://lin.ee/0tjfm9R" target="_blank" rel="noopener" class="cta-btn cta-btn--line"
+                style="max-width:320px;margin:0 auto;padding:14px 24px;font-size:.9rem">💬 LINEでみだに相談する</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 追伸 ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="ps-box">
+        <p class="ps-label">P.S.</p>
+        <p>半年前に相談に来てくれた方も、最初は「ちょっと話を聞いてみよう」からでした。</p>
+        <p style="margin-top:12px">
+          すぐに転職しなくていい。独立しなくてもいい。<br>ただ、<strong>「自分にはこういう選択肢もあるんだ」</strong>と知るだけで、<br>気持ちってかなり変わります。</p>
+        <p style="margin-top:12px">事例集を読んでみて、「あ、自分にも関係あるかも」と思ったら、<br>そのときに一歩進めばいい。</p>
+        <p style="margin-top:12px"><strong>まず知ることから、始めてみませんか？</strong></p>
+        <div class="text-center" style="margin-top:24px">
+          <a href="https://lin.ee/0tjfm9R" target="_blank" rel="noopener" class="cta-btn cta-btn--line"
+            style="max-width:360px">� LINEでみだに相談する</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section--off" id="faq">
+    <div class="container">
+      <div class="text-center mb-48">
+        <span class="section-label section-label--accent">FAQ</span>
+        <h2 class="section-title">よくあるご質問</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">本当に無料ですか？</div>
+          <div class="faq-a">
+            <div class="faq-a-inner">はい、事例集PDFのダウンロードは完全無料です。ダウンロード後の営業連絡や売り込みも一切ありません。まずは情報として読んでいただければ嬉しいです。</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">今すぐ転職する気はないのですが…</div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              もちろん問題ありません。むしろ、今すぐ動く必要はありません。「こういう選択肢がある」と知っておくだけで、いざというときに冷静に判断できます。情報収集の一つとしてご活用ください。</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">地方に住んでいても大丈夫ですか？</div>
+          <div class="faq-a">
+            <div class="faq-a-inner">はい、全国対応しています。キャリア相談はすべてWeb面談で実施可能です。地域を問わず、あなたの適性に合った案件をご紹介できます。</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">女性でも利用されていますか？</div>
+          <div class="faq-a">
+            <div class="faq-a-inner">はい、ご相談者の約4割が女性です。時短勤務やリモートワーク、育休後のキャリア再設計など、女性ならではの悩みにも対応しています。</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">スキルに自信がないのですが…</div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              実は、相談に来られる方のほとんどが最初はそうおっしゃいます。でもスキルの棚卸しをすると、「自分にこんな強みがあったんだ」と驚かれる方が大半です。自分では気づきにくい強みを一緒に見つけるのが、みだの役割です。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 liasom works. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* フローティングCTA */
+    const floatingCta = document.getElementById('floatingCta');
+    const heroSection = document.getElementById('hero');
+    const formSection = document.getElementById('line');
+    function checkFloating() {
+      const heroBottom = heroSection.getBoundingClientRect().bottom;
+      const formTop = formSection.getBoundingClientRect().top;
+      const windowH = window.innerHeight;
+      if (heroBottom < 0 && formTop > windowH) {
+        floatingCta.classList.add('visible');
+      } else {
+        floatingCta.classList.remove('visible');
+      }
+    }
+    window.addEventListener('scroll', checkFloating);
+    checkFloating();
+
+    /* 共感リストのアニメーション */
+    const empathyItems = document.querySelectorAll('.empathy-item');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    empathyItems.forEach(item => observer.observe(item));
+
+    /* FAQ トグル */
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const answer = item.querySelector('.faq-a');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = '0';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    }
+
+    /* フォーム送信（ダミー） */
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('downloadForm');
+      const success = document.getElementById('formSuccess');
+      form.style.display = 'none';
+      success.style.display = 'block';
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    /* スムーズスクロール */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          const offset = floatingCta.classList.contains('visible') ? 80 : 0;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
